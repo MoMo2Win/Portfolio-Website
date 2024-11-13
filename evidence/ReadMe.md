@@ -8,7 +8,7 @@ g_1.png)
 ## Figma Design
 ### Home
 - When hovering into projects and sample.p will show a drop menu, consisting of all phases and my projects.
-![Home-Page.png](Home-Page.png)
+    ![Home-Page.png](Home-Page.png)
 
 ### Contact
 ![Contact-Page.png](Contact-Page.png)
