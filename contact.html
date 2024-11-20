@@ -73,29 +73,29 @@
             </ul>
         </nav>
     </header>
-    <main class="w-4/5 mx-auto m-auto pb-8 border border-LGB rounded-lg text-white flex flex-col">
-        <form action="">
+    <main class="w-2/3 mx-auto m-auto pb-8 border border-LGB rounded-lg text-white flex flex-col">
+        <form class="flex flex-col p-4" action="">
             <h2>Contact Me</h2>
             <label for="name">Name:</label>
-            <input type="text"  id="name" name="name">
+            <input class="rounded-md" type="text"  id="name" name="name">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input class="rounded-md" type="email" id="email" name="email">
 
             <label for="message">Message:</label>
-            <textarea name="message" id="message"></textarea>
-            <button></button>
+            <textarea class="rounded-md" name="message" id="message"></textarea>
+            <button class="m-4 border border-LGB rounded-md inline-flex items-center justify-center px-0 py-0">Submit</button>
         </form>
 
-        <article>
-            <section>
-                <p>Phone Number</p>
+        <article class="flex flex-row basis-1/3 gap-2 m-4">
+            <section class="border border-LGB rounded-md block h-full w-full">
+                <p class="flex justify-center text-xs">Phone</p>
             </section>
-            <section>
-                <p>Email</p>
+            <section class="border border-LGB rounded-md block h-full w-full">
+                <p class="flex justify-center text-xs">Email</p>
             </section>
-            <section>
-                <p>Discord</p>
+            <section class="border border-LGB rounded-md block h-full w-full">
+                <p class="flex justify-center text-xs">Discord</p>
             </section>
         </article>
     </main>
