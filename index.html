@@ -1,10 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/css-resets/necolas-normalize.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
 </head>
-<body>
-
+<body class="bg-black min-h-screen flex flex-col">
+    <header class="top-0 fex flex-col z-10">
+        <section class="flex flex-row ">
+            <img class="invert p-2 w-auto h-auto" src="assets/img/logo-site.png" alt="logo">
+            <h1 class="text-white font-bold p-5 text-4xl">Portfolio Project</h1>
+        </section>
+        <nav class="border-y-2 border-LGB text-white block p-2">
+            <ul class="flex flex-row space-x-3 text-sm font-medium">
+                <li>
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="about.html">About</a>
+                </li>
+                <li>
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="resume.html">Resume</a>
+                </li>
+                <li class="group relative dropdown">
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="projects.html">Projects</a>
+                    <ul class="group-hover:block shadow-gray-500/50 shadow-md dropdown-menu mt-1 absolute hidden
+                         h-auto transition duration-500 ease-in-out bg-black border border-LGB rounded-md
+                          px-2 py-4 gap-1 w-20">
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 1</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 2</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 3</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 4</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 5</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="group relative dropdown">
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="myworks.html">Sample.P</a>
+                    <ul class="group-hover:block shadow-gray-500/50 shadow-md dropdown-menu mt-1 absolute hidden
+                         h-auto transition duration-500 ease-in-out bg-black border border-LGB rounded-md
+                          px-2 py-4 gap-1 w-24">
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Sample 1</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Sample 2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="w-4/5 mx-auto m-auto pb-8 border border-LGB rounded-lg text-white">
+        <article class="flex flex-col gap-8">
+            <header class="m-8 mb-0">
+                <h2 class="flex justify-center border-b-2 border-LGB text-2xl font-bold">Home Page</h2>
+                <p class="p-2">Welcome to my portfolio.</p>
+            </header>
+            <div class="flex flex-row flex-wrap gap-2 m-4">
+                <section class="basis-1/3 grow border border-LGB rounded-md p-4 hover:bg-blue-900">
+                    <a class="block w-full" href="contact.html">
+                        <h3 class="flex justify-center border-b-2 border-LGB text-lg">Contacts</h3>
+                        <p class="p-1 mt-2">Holds all my contacts, where you can reach me in different types of form.
+                        Such as Through phone, email and etc.</p>
+                    </a>
+                </section>
+                <section class="basis-1/3 grow border border-LGB rounded-md p-4 hover:bg-blue-900">
+                    <a class="block w-full" href="about.html">
+                        <h3 class="flex justify-center border-b-2 border-LGB text-lg">About</h3>
+                        <p class="p-1 mt-2">Just a little introductions of myself and what i'm interested into.</p>
+                    </a>
+                </section>
+                <section class="basis-1/3 grow border border-LGB rounded-md p-4 hover:bg-blue-900">
+                    <a class="block w-full" href="resume.html">
+                        <h3 class="flex justify-center border-b-2 border-LGB text-lg">Resume</h3>
+                        <p class="p-1 mt-2">Holds all my experience through workplace related.</p>
+                    </a>
+                </section>
+                <section class="basis-1/3 grow border border-LGB rounded-md p-4 hover:bg-blue-900">
+                    <a class="block w-full" href="projects.html">
+                        <h3 class="flex justify-center border-b-2 border-LGB text-lg">Projects</h3>
+                        <p class="p-1 mt-2">Contains Some of my school project that was completed</p>
+                    </a>
+                </section>
+                <section class="basis-1/3 grow border border-LGB rounded-md p-4 hover:bg-blue-900">
+                    <a class="block w-full" href="myworks.html">
+                        <h3 class="flex justify-center border-b-2 border-LGB text-lg">Sample Projects</h3>
+                        <p class="p-1 mt-2">Here holds some of my personnel projects that I have created.</p>
+                    </a>
+                </section>
+            </div>
+        </article>
+    </main>
+    <footer class="mt-auto flex flex-row justify-between p-8 border-t border-LGB text-white">
+        <section>
+            <img class="invert p-2 w-auto h-auto" src="assets/img/logo-site.png" alt="logo">
+            <p>&copy; Copyright 2023, James Asilo & Adrian Gould</p>
+        </section>
+        <section>
+            <ul>
+                <li>
+                    <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="https://northmetrotafe.wa.edu.au">North Metro Tafe</a>
+                </li>
+                <li>
+                    <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="https://components.dev.screencraft.net.au">ScreenCraft Dev Sites</a>
+                </li>
+                <li>
+                    <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="copyright.html">Copyright</a>
+                </li>
+            </ul>
+        </section>
+    </footer>
 </body>
 </html>
