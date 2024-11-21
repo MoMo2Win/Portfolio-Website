@@ -73,25 +73,26 @@
             </ul>
         </nav>
     </header>
-    <main class="w-2/3 mx-auto m-auto pb-8 border border-LGB rounded-lg flex flex-col">
-        <article>
-            <h2>About Page</h2>
-            <section>
-                <p>My Name is James, I like to play games, watch anime and go to gym.</p>
+    <main class="w-4/5 mx-auto m-auto pb-8 border border-LGB rounded-lg flex flex-col">
+        <article class="flex flex-col text-white p-4">
+            <h2 class="mx-auto font-bold text-2xl border-b-2 border-LGB mb-3 flex justify-center">About Page</h2>
+            <section class="block">
+                <p class="p-2 rounded-md mb-5">My Name is James, I like to play games, watch anime and go gym.</p>
             </section>
-            <section>
-                <h3>Anime Random Quote Generator</h3>
-                <form id="animeForm">
+            <section class="block p-2">
+                <h3 class="mx-auto font-bold text-auto border-b-2 border-LGB flex justify-center mb-2">Anime Random Quote Generator</h3>
+                <form class="flex flex-col p-4" id="animeForm">
                     <label for="animeName">Name of Anime:</label>
-                    <input type="text" id="animeName" name="animeName">
+                    <input class="rounded-md text-black" type="text" placeholder="e.g. Haikyuu" id="animeName" name="animeName">
 
                     <label for="animeCharacter">Name of Character:</label>
-                    <input type="text" id="animeCharacter" name="animeCharacter">
+                    <input class="rounded-md text-black" type="text" placeholder="e.g. Hinata" id="animeCharacter" name="animeCharacter">
 
-                    <button id="getResponse">Get Quotes</button>
+                    <button class="mt-8 text-white mx-auto border border-LGB rounded-md w-32 py-3 text-sm hover:bg-SG transition duration-1000
+                            ease-in-out" id="getResponse">Get Quotes</button>
                 </form>
 
-                <div class="result" id="resultArea">
+                <div class="mx-auto border border-LGB rounded-md flex justify-center py-4 mt-6" id="resultArea">
                     <h4>Anime Quotes</h4>
                 </div>
             </section>
