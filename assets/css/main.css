@@ -1,1 +1,55 @@
+/* For Mobile Design */
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
 
+.box-item{
+    border: 1px solid #E0E7FF;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    transition: transform 1s ease, background-color 1s ease;
+}
+
+.box-item:hover, .box-item:focus{
+    background-color: #1E3A8A;
+    transform: scale(1.2);
+}
+
+
+.box-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+h3{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Desktop view */
+@media (min-width: 768px){
+    .box{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .box-item{
+        width: 45%;
+        flex: 1;
+    }
+}
