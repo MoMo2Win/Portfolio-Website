@@ -30,3 +30,10 @@ g_1.png)
 
 ### Mobile Design Projects
 ![Mobile-Design-Projects.png](Mobile-Design-Projects.png)
+
+### Google Chrome test
+![img_2.png](img_2.png)
+
+
+### Brave browser test
+![img_3.png](img_3.png)
