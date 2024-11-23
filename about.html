@@ -85,6 +85,7 @@
                 <form class="flex flex-col p-4 border border-LGB rounded-md" id="triviaGame">
                     <label for="quizCategory">Category:</label>
                     <select class="bg-black border border-LGB rounded-md p-1 flex mt-2 mb-2" name="quizCategory" id="quizCategory">
+                        <option value="" disabled selected>Select Category</option>
                         <option value="art Literature">Art Literature</option>
                         <option value="language">Language</option>
                         <option value="sciencenature">Science Nature</option>
@@ -104,7 +105,7 @@
                         <h4>Question</h4>
                     </section>
                     <label class="mt-2" for="inputAnswer">Answer:</label>
-                    <input class="rounded-md bg-black border border-LGB" type="text" id="inputAnswer" placeholder="Enter here">
+                    <input class="rounded-md bg-black border border-LGB p-2" type="text" id="inputAnswer" placeholder="Enter here">
 
                     <button class="mt-8 text-white mx-auto border border-LGB rounded-md w-32 py-3 text-sm hover:bg-SG transition duration-1000
                             ease-in-out" id="getResponse">Submit</button>

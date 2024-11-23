@@ -1,9 +1,3 @@
-/*
-function clearArea(){
-    document.getElementById("resultArea").innerText = "";
-}
-*/
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("triviaGame");
     const quizCategory = document.getElementById("quizCategory");
