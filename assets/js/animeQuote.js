@@ -4,84 +4,66 @@ function clearArea(){
 }
 */
 
-function returnFact(){
-    const animeNameInput = document.getElementById('animeName').value;
-    const animeName = animeNameInput.replace(/\s+/g, "_");
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("triviaGame");
+    const quizCategory = document.getElementById("quizCategory");
+    const quizQuestions = document.getElementById("quizQuestions");
+    const inputAnswer = document.getElementById("inputAnswer");
+    const resultAreas = document.getElementById("resultArea");
+    const submitButton = document.getElementById("getResponse")
 
-    if (animeName === ""){
-        document.getElementById('resultArea').innerText = 'Please enter an anime name';
-        return;
+    let quizAnswer = "";
+
+    quizCategory.addEventListener("change", () => callAPi(quizCategory.value, quizQuestions));
+    submitButton.addEventListener("click", (event) => handleSubmit(event, inputAnswer, resultAreas, quizAnswer));
+
+
+
+async function callAPi(category, quizQuestions)  {
+    const apiUrl ='https://api.api-ninjas.com/v1/trivia?category=' + category;
+
+    try{
+        quizQuestions.innerHTML = "<h4>Loading... </h4>";
+
+        const response = await fetch(apiUrl,{
+            headers:{
+                'X-Api-Key':'asQGoRW9zHmWfr4mGLV9qg==AGlKBAgpHjj3BGe2'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to load api data.");
+        }
+
+        const data = await response.json();
+        if (data.length > 0) {
+            const questionData = data[0];
+            quizAnswer = questionData.answer.toLowerCase();
+            quizQuestions.innerHTML = `<h4>${questionData.question}</h4>`;
+        } else{
+            quizQuestions.innerHTML='<h4> No question found for this category.</h4>';
+        }
     }
-
-     const url = `https://anime-facts-rest-api.herokuapp.com/api/v1/${animeName}`;
-
-    fetch(url)
-        .then(response => {
-            if(!response.ok){
-                throw new Error(`API request failed with status code ${response.status}`);
-            }
-            return response.json();
-        })
-
-        .then(data =>{
-            if (data.success && data.data.length>0){
-                document.getElementById('resultArea').innerText = data.data[0].fact;
-            }
-            else{
-                document.getElementById('resultArea').innerText = 'No facts found for this anime';
-            }
-        })
-        .catch(error =>{
-            document.getElementById('resultArea').innerText = `Error: ${error.message}`;
-        })
+    catch(error) {
+        quizQuestions.innerHTML='<h4> Failed to load question. ${error.message}</h4>';
+    }
 }
 
 
-/*function returnQuote(){
-    const animeName = document.getElementById('animeName').value;
+function handleSubmit(event, inputAnswer, resultArea, quizAnswer) {
+    event.preventDefault();
+    const playersAnswer = inputAnswer.value.trim().toLowerCase();
 
-    if (animeName === ""){
-        document.getElementById('resultArea').innerText = 'Please enter an anime';
+     if (!quizAnswer) {
+        resultArea.innerHTML = `<p style="color: red;">Please select a category and load a question first.</p>`;
         return;
     }
 
-    const url = `https://animechan.io/api/quotes/anime?title=${animeName}`;
+     if (playersAnswer === quizAnswer) {
+         resultArea.innerHTML = `<p style="color: green;">Correct! 🎉</p>`;
+     }else{
+         resultArea.innerHTML = `<p style="color: red;">Incorrect. The correct answer is: <strong>${quizAnswer}</strong>.</p>`;
 
-    fetch(url, {
-        headers:{
-            'x-api-key': 'ani-vejqkXbj0XWfKDRxbnYb8wR2OuUyAa5SHOb3Hu6knVJYL2P39HKtDCzRcDnq',
-        }
-    })
-
-        .then(response =>
-        {if (!response.ok) {
-            throw new Error(`$Api request failed with status code ${response.status}`);
-        }
-        return response.json()})
-
-         .then(data => {
-            if (data && data.data) {
-                const quoteContent = data.data.content;
-                const anime = data.data.anime.name;
-                const character = data.data.character.name;
-                document.getElementById('resultArea').innerText =
-                    `${character} from ${anime} says: "${quoteContent}"`;
-            } else {
-                document.getElementById('resultArea').innerText =
-                    "No quotes found for the specified anime.";
-            }
-        })
-        .catch((error) => {
-            document.getElementById('resultArea').innerText = `Error: ${error.message}`;
-        });
-
-}*/
-
-
-document.addEventListener("DOMContentLoaded", function(){
-    const button = document.getElementById("getResponse");
-    button.addEventListener("click", function(event){
-        event.preventDefault();
-        returnQuote();
-    })
-})
+     }
+    }
+});
