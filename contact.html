@@ -74,16 +74,17 @@
         </nav>
     </header>
     <main class="w-4/5 mx-auto m-auto pb-8 border border-LGB rounded-lg flex flex-col">
-        <form class="flex flex-col p-4" action="">
+        <form class="flex flex-col p-4" action="https://api.web3forms.com/submit" method="POST">
             <h2 class="mx-auto text-white font-bold text-2xl border-b-2 border-LGB mb-5">Contact Me</h2>
+            <input type="hidden" name="access_key" value="bf1fde5e-adb4-4229-8bc2-5077a7f51afa">
             <label class="text-white" for="name">Name:</label>
-            <input class="rounded-md" type="text" placeholder="e.g. James Asilo"  id="name" name="name">
+            <input class="rounded-md p-2" type="text" placeholder="e.g. James Asilo"  id="name" name="name">
 
             <label class="text-white" for="email">Email:</label>
-            <input class="rounded-md" type="email" placeholder="e.g. email@gmail.com" id="email" name="email">
+            <input class="rounded-md p-2" type="email" placeholder="e.g. email@gmail.com" id="email" name="email">
 
             <label class="text-white" for="message">Message:</label>
-            <textarea class="rounded-md mb-5" name="message" placeholder="e.g. Hello There" id="message"></textarea>
+            <textarea class="rounded-md mb-5 p-2" name="message" placeholder="e.g. Hello There" id="message"></textarea>
             <button class="mt-4 text-white mx-auto border border-LGB rounded-md w-32 py-3 text-sm hover:bg-SG transition duration-1000
             ease-in-out">Submit</button>
         </form>
