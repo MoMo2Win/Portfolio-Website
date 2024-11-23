@@ -8,6 +8,7 @@
     <title>About-Page</title>
     <link rel="stylesheet" href="./assets/css/css-resets/necolas-normalize.css">
     <link rel="stylesheet" href="./assets/css/site.css">
+    <script src="./assets/js/animeQuote.js"></script>
 </head>
 <body class="bg-black min-h-screen flex flex-col">
     <header class="top-0 fex flex-col z-10">
@@ -80,20 +81,37 @@
                 <p class="p-2 rounded-md mb-5">My Name is James, I like to play games, watch anime and go gym.</p>
             </section>
             <section class="block p-2">
-                <h3 class="mx-auto font-bold text-auto border-b-2 border-LGB flex justify-center mb-2">Anime Random Quote Generator</h3>
-                <form class="flex flex-col p-4" id="animeForm">
-                    <label for="animeName">Name of Anime:</label>
-                    <input class="rounded-md text-black" type="text" placeholder="e.g. Haikyuu" id="animeName" name="animeName">
-
-                    <label for="animeCharacter">Name of Character:</label>
-                    <input class="rounded-md text-black" type="text" placeholder="e.g. Hinata" id="animeCharacter" name="animeCharacter">
+                <h3 class="mx-auto font-bold text-auto border-b-2 border-LGB flex justify-center mb-2">Little Trivia Game:</h3>
+                <form class="flex flex-col p-4 border border-LGB rounded-md" id="animeForm">
+                    <label for="quizCategory">Category:</label>
+                    <select class="bg-black border border-LGB rounded-md p-1 flex mt-2 mb-2" name="quizCategory" id="quizCategory">
+                        <option value="art Literature">Art Literature</option>
+                        <option value="language">Language</option>
+                        <option value="sciencenature">Science Nature</option>
+                        <option value="general">General</option>
+                        <option value="fooddrink">Food Drink</option>
+                        <option value="peopleplaces">People Places</option>
+                        <option value="geography">Geography</option>
+                        <option value="historyholidays">History Holidays</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="toysgames">Toys Games</option>
+                        <option value="music">Music</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="religionmythology">Religion Mythology</option>
+                        <option value="sportsleisure">Sports leisure</option>
+                    </select>
+                    <section id="quizQuestions" class="flex justify-center p-4 mt-2 mb-2 border border-LGB rounded-md">
+                        <h4>Question</h4>
+                    </section>
+                    <label class="mt-2" for="inputAnswer">Answer:</label>
+                    <input class="rounded-md" type="text" id="inputAnswer" placeholder="Enter here">
 
                     <button class="mt-8 text-white mx-auto border border-LGB rounded-md w-32 py-3 text-sm hover:bg-SG transition duration-1000
-                            ease-in-out" id="getResponse">Get Quotes</button>
+                            ease-in-out" id="getResponse">Submit</button>
                 </form>
 
                 <div class="mx-auto border border-LGB rounded-md flex justify-center py-4 mt-6" id="resultArea">
-                    <h4>Anime Quotes</h4>
+                    <h4>Answer</h4>
                 </div>
             </section>
         </article>
