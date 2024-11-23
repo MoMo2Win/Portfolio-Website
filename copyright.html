@@ -1,10 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Copyright-Pag</title>
+    <link rel="stylesheet" href="./assets/css/css-resets/necolas-normalize.css">
+    <link rel="stylesheet" href="./assets/css/site.css">
 </head>
-<body>
-
+<body class="bg-black min-h-screen flex flex-col">
+    <header class="top-0 fex flex-col z-10">
+        <section class="flex flex-row ">
+            <img class="invert p-2 w-auto h-auto" src="assets/img/logo-site.png" alt="logo">
+            <h1 class="text-white font-bold p-5 text-4xl">Portfolio Project</h1>
+        </section>
+        <nav class="border-y-2 border-LGB text-white block p-2">
+            <ul class="flex flex-row space-x-3 text-sm font-medium">
+                <li>
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="about.html">About</a>
+                </li>
+                <li>
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="resume.html">Resume</a>
+                </li>
+                <li class="group relative dropdown">
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="projects.html">Projects</a>
+                    <ul class="group-hover:block shadow-gray-500/50 shadow-md dropdown-menu mt-1 absolute hidden
+                         h-auto transition duration-500 ease-in-out bg-black border border-LGB rounded-md
+                          px-2 py-4 gap-1 w-20">
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 1</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 2</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 3</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 4</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Phase 5</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="group relative dropdown">
+                    <a class="hover:border-b-2 border-orange-500 hover:text-orange-500 transition
+                    duration-500 ease-in-out pb-2" href="myworks.html">Sample.P</a>
+                    <ul class="group-hover:block shadow-gray-500/50 shadow-md dropdown-menu mt-1 absolute hidden
+                         h-auto transition duration-500 ease-in-out bg-black border border-LGB rounded-md
+                          px-2 py-4 gap-1 w-24">
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Sample 1</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="">Sample 2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="w-4/5 mx-auto m-auto pb-8 border border-LGB rounded-lg text-white">
+        <article class="flex flex-col gap-2">
+            <header class="m-4">
+                <h2 class="flex justify-center border-b-2 border-LGB text-2xl font-bold">Copyright Page</h2>
+            </header>
+            <section class="m-4 flex flex-col">
+                <h3 class="text-xl font-bold flex">Copyright</h3>
+                <p>Content is copyright Adrian Gould, ScreenCraft Teaching Resources and
+                the respective owners of image, text and other related content not originally created
+                by James Asilo for the purpose of this assessment</p>
+            </section>
+            <div class="flex flex-col gap-2 m-2 p-2">
+                <h3 class="text-xl font-bold flex">References</h3>
+                <section class="rounded-md p-4 grow border border-LGB duration-1000 ease-in-out hover:bg-blue-900">
+                    <h4 class="text-xl text-gray-500 underline">Tailwind Labs</h4>
+                    <p class="p-2">Documentation - Tailwind CSS. (n.d.). Tailwindcss.com.
+                        <a href="https://tailwindcss.com/docs">https://tailwindcss.com/docs</a></p>
+                </section>
+                <section class="rounded-md p-4 grow border border-LGB duration-1000 ease-in-out hover:bg-blue-900">
+                    <h4 class="text-xl text-gray-500 underline">MyBib Citation Generator</h4>
+                    <p class="p-2">MyBib Contributors. (2019, May 26). APA Citation Generator – FREE & Fast – (6th Edition, 2019). MyBib.
+                        <a href="https://www.mybib.com/tools/apa-citation-generator">https://www.mybib.com/tools/apa-citation-generator</a></p>
+                </section>
+                <section class="rounded-md p-4 grow border border-LGB duration-1000 ease-in-out hover:bg-blue-900">
+                    <h4 class="text-xl text-gray-500 underline">Logo Image</h4>
+                    <p class="p-2">Download Web Icon vector Line on white background image for web, presentation, logo, Icon Symbol. for free. (n.d.). Vecteezy.
+                        <a href="https://www.vecteezy.com/vector-art/3731316-web-icon-vector-line-on-white-background-image-for-web-presentation-logo-icon-symbol">https://www.vecteezy.com/vector-art/3731316-web-icon-vector-line-on-white-background-image-for-web-presentation-logo-icon-symbol</a></p>
+                </section>
+                <section class="rounded-md p-4 grow border border-LGB duration-1000 ease-in-out hover:bg-blue-900">
+                    <h4 class="text-xl text-gray-500 underline">Api Ninja</h4>
+                    <p class="p-2">Trivia API - API Ninjas. (n.d.). Api-Ninjas.com. https://api-ninjas.com/api/trivia
+                        <a href="https://api-ninjas.com/api/trivia">https://api-ninjas.com/api/trivia</a></p>
+                </section>
+            </div>
+        </article>
+    </main>
+    <footer class="mt-auto flex flex-row justify-between p-8 border-t border-LGB text-white">
+        <section>
+            <img class="invert p-2 w-auto h-auto" src="assets/img/logo-site.png" alt="logo">
+            <p>&copy; Copyright 2023, James Asilo & Adrian Gould</p>
+        </section>
+        <section>
+            <ul>
+                <li>
+                    <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="https://northmetrotafe.wa.edu.au">North Metro Tafe</a>
+                </li>
+                <li>
+                    <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="https://components.dev.screencraft.net.au">ScreenCraft Dev Sites</a>
+                </li>
+                <li>
+                    <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a class="hover:text-orange-500 transition duration-500 ease-in-out pb-2" href="copyright.html">Copyright</a>
+                </li>
+            </ul>
+        </section>
+    </footer>
 </body>
 </html>
